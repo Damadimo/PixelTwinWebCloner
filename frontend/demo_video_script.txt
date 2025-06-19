@@ -1,0 +1,23 @@
+Website Visual Cloner - Demo Video Script
+
+[Opening shot: Screen recording of the homepage]
+
+Hi, and welcome to this quick demo of the Website Visual Cloner. In this video, I'll show you how easy it is to create a pixel-perfect static clone of any public website using this tool.
+
+First, let's take a look at the homepage. Here, you can enter the URL of any website you want to clone. For this demo, I'll use github.com as an example.
+
+[Type in "https://github.com" and click "Clone Website"]
+
+Once you click the button, the app starts processing. In the background, it scrapes the original site, captures all the CSS, images, and layout, and then uses a language model to generate a static HTML version that looks just like the original.
+
+[Show the loading state, then the result]
+
+After a few seconds, you'll see the cloned version appear below. Notice how the colors, gradients, fonts, and images are all preserved. The layout matches the original site, and you can scroll through the page just like you would on the real site.
+
+If you want to inspect the code or use the clone elsewhere, you can download the HTML file directly from this page.
+
+[Click "Download HTML"]
+
+This tool works for almost any public website, including modern JavaScript-heavy sites. It's great for archiving, design inspiration, or just exploring how different sites are built.
+
+Thanks for watching this demo. If you have any questions or want to try it yourself, just follow the instructions in the README to get started. 
