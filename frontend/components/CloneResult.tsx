@@ -99,40 +99,30 @@ export default function CloneResult({ result, originalUrl, onReset }: CloneResul
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+    <div className="pixel-card overflow-hidden">
       {/* Header */}
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="p-6 border-b-2 border-pixel-beige">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Clone Complete! 🎉</h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">Successfully cloned: {originalUrl}</p>
-            {htmlError && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">⚠️ {htmlError}</p>}
+            <h2 className="text-2xl font-bold text-pixel-beige-light pixel-text">&gt; CLONE_COMPLETE!</h2>
+            <p className="text-pixel-beige-muted mt-1 pixel-text text-sm">&gt; TARGET: {originalUrl}</p>
+            {htmlError && <p className="text-red-400 mt-1 text-sm pixel-text">⚠️ {htmlError}</p>}
           </div>
           <div className="flex gap-3">
             <button onClick={handleViewOriginal} className="btn btn-secondary flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-              View Original
+              <div className="w-4 h-4 pixel-art">
+                <div className="w-full h-full border border-current"></div>
+              </div>
+              VIEW_ORIG
             </button>
             <button onClick={handleDownload} className="btn btn-primary flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Download HTML
+              <div className="w-4 h-4 pixel-art">
+                <div className="w-full h-full border border-current bg-current"></div>
+              </div>
+              DOWNLOAD
             </button>
             <button onClick={onReset} className="btn btn-secondary">
-              Clone Another
+              RESET
             </button>
           </div>
         </div>
@@ -140,7 +130,7 @@ export default function CloneResult({ result, originalUrl, onReset }: CloneResul
 
       {/* Preview */}
       <div className="p-6">
-        <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white">
+        <div className="pixel-border overflow-hidden" style={{ background: 'rgba(45, 62, 82, 0.2)' }}>
           <iframe
             srcDoc={processedHtml}
             className="w-full h-[600px] border-0"

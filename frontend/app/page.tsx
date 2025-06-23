@@ -36,32 +36,41 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
+    <main className="container mx-auto px-4 py-8 max-w-4xl min-h-screen">
       {/* Header */}
       <header className="text-center mb-12">
-        <div className="flex items-center justify-center gap-3 mb-6">
-          {/* Purple 4-leaf clover logo */}
-          <div className="w-12 h-12 relative">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              {/* Top leaf */}
-              <ellipse cx="50" cy="30" rx="15" ry="20" fill="#8b5cf6" transform="rotate(0 50 30)" />
-              {/* Right leaf */}
-              <ellipse cx="70" cy="50" rx="15" ry="20" fill="#8b5cf6" transform="rotate(90 70 50)" />
-              {/* Bottom leaf */}
-              <ellipse cx="50" cy="70" rx="15" ry="20" fill="#8b5cf6" transform="rotate(180 50 70)" />
-              {/* Left leaf */}
-              <ellipse cx="30" cy="50" rx="15" ry="20" fill="#8b5cf6" transform="rotate(270 30 50)" />
-              {/* Center circle */}
-              <circle cx="50" cy="50" r="8" fill="#7c3aed" />
-            </svg>
+        <div className="flex items-center justify-center gap-4 mb-8">
+          {/* Pixel art logo */}
+          <div className="w-16 h-16 relative pixel-art">
+            <div className="w-full h-full border-2 border-pixel-beige bg-pixel-navy" style={{
+              background: `
+                radial-gradient(circle at 25% 25%, #f4e4bc 2px, transparent 2px),
+                radial-gradient(circle at 75% 25%, #f4e4bc 2px, transparent 2px),
+                radial-gradient(circle at 25% 75%, #f4e4bc 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #f4e4bc 2px, transparent 2px),
+                #4a6785
+              `,
+              backgroundSize: '8px 8px'
+            }}>
+              <div className="absolute inset-2 bg-pixel-navy-dark border-2 border-pixel-beige">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-pixel-beige pixel-art"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-lavender to-purple-700 bg-clip-text text-transparent">
-            Orchid AI Website Cloner
+          <h1 className="text-4xl font-bold text-pixel-navy-dark pixel-text tracking-wider" style={{ textShadow: '2px 2px 0px #f4e4bc' }}>
+            PIXELTWIN AI
           </h1>
         </div>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Enter any website URL and watch our AI recreate it with pixel-perfect precision
-        </p>
+        <div className="pixel-card p-6 max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-pixel-accent pixel-text text-center font-bold">
+            &gt; CLONE_WEBSITE.EXE
+          </p>
+          <p className="text-sm text-pixel-beige pixel-text text-center mt-2">
+            Enter target URL and execute pixel-perfect replication protocol
+          </p>
+        </div>
       </header>
 
       {/* Main Content */}
@@ -74,8 +83,13 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="text-center mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-gray-500 dark:text-gray-400">Powered by Next.js, FastAPI, and AI</p>
+      <footer className="text-center mt-16 pt-8 border-t-2 border-pixel-beige">
+        <div className="pixel-card p-4 max-w-md mx-auto">
+          <p className="text-pixel-beige-muted pixel-text text-sm">
+            &gt; SYSTEM.STATUS: <span className="text-pixel-accent font-bold">ONLINE</span><br/>
+            &gt; POWERED_BY: NEXT.JS + FASTAPI + AI
+          </p>
+        </div>
       </footer>
     </main>
   )

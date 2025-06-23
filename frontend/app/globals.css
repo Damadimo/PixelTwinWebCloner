@@ -2,35 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 250, 250, 250;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 15, 15, 15;
-    --background-end-rgb: 30, 30, 30;
-  }
+:root {
+  --foreground-rgb: 244, 228, 188;
+  --background-start-rgb: 26, 35, 50;
+  --background-end-rgb: 26, 35, 50;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: 'JetBrains Mono', Monaco, Menlo, 'Ubuntu Mono', monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  min-height: 100vh;
+}
+
+/* Pixel art styling */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Custom scrollbar for pixel aesthetic */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a2332;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a6785;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a8fb8;
 }
 
 @layer utilities {
   .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-lavender focus:ring-offset-2;
+    @apply px-4 py-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-pixel-navy focus:ring-offset-2;
+    border: 2px solid transparent;
+    border-radius: 0;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .btn-primary {
-    @apply bg-lavender text-white hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-pixel-navy-light text-pixel-beige-light border-pixel-navy-light hover:bg-pixel-accent hover:border-pixel-accent disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   .btn-secondary {
-    @apply bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600;
+    @apply bg-transparent text-pixel-beige border-pixel-beige hover:bg-pixel-beige hover:text-pixel-navy-dark;
+  }
+
+  .pixel-border {
+    border: 2px solid #f4e4bc;
+    border-radius: 0;
+  }
+
+  .pixel-card {
+    @apply border-2 border-pixel-beige;
+    border-radius: 0;
+    background: rgba(45, 62, 82, 0.4);
+    box-shadow: 3px 3px 0px rgba(122, 143, 184, 0.6);
+  }
+
+  .pixel-text {
+    font-family: 'JetBrains Mono', monospace;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
   }
 }

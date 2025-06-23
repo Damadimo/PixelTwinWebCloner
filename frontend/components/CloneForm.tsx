@@ -28,18 +28,19 @@ export default function CloneForm({ onSubmit, isLoading }: CloneFormProps) {
   const demoUrls = ["https://stripe.com", "https://vercel.com", "https://github.com", "https://tailwindcss.com"]
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+    <div className="pixel-card p-8">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="url-input" className="block text-sm font-medium mb-2">
-            Website URL to Clone
+          <label htmlFor="url-input" className="block text-sm font-medium mb-3 pixel-text text-pixel-accent font-bold">
+            &gt; INPUT_TARGET_URL:
           </label>
           <div className="flex gap-3">
             <input
               id="url-input"
               type="url"
-              className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-lavender focus:border-lavender dark:bg-gray-700 dark:text-white"
-              placeholder="https://example.com"
+              className="flex-1 px-4 py-3 pixel-border text-pixel-beige-light pixel-text focus:ring-2 focus:ring-pixel-accent focus:border-pixel-accent placeholder:text-pixel-beige-muted"
+              style={{ background: 'rgba(45, 62, 82, 0.5)' }}
+              placeholder="https://target-site.com"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               disabled={isLoading}
@@ -53,10 +54,10 @@ export default function CloneForm({ onSubmit, isLoading }: CloneFormProps) {
               {isLoading ? (
                 <>
                   <LoadingSpinner size="sm" />
-                  Cloning...
+                  EXECUTING...
                 </>
               ) : (
-                "Clone Website"
+                "EXECUTE"
               )}
             </button>
           </div>
@@ -64,13 +65,14 @@ export default function CloneForm({ onSubmit, isLoading }: CloneFormProps) {
 
         {/* Demo URLs */}
         <div>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Try these demo websites:</p>
+          <p className="text-sm text-pixel-beige-muted mb-3 pixel-text">&gt; DEMO_TARGETS:</p>
           <div className="flex flex-wrap gap-2">
             {demoUrls.map((demoUrl) => (
               <button
                 key={demoUrl}
                 type="button"
-                className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="px-3 py-2 text-sm text-pixel-beige pixel-border hover:bg-pixel-beige hover:text-pixel-navy-dark transition-colors pixel-text"
+                style={{ background: 'rgba(45, 62, 82, 0.3)' }}
                 onClick={() => setUrl(demoUrl)}
                 disabled={isLoading}
               >

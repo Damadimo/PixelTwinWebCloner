@@ -108,7 +108,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h1 className="text-2xl font-bold">Orchid AI Website Cloner</h1>
+          <h1 className="text-2xl font-bold">PixelTwin AI Website Cloner</h1>
         </div>
       </header>
 

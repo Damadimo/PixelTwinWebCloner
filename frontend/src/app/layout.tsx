@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Orchid AI Website Cloner",
+  title: "PixelTwin AI Website Cloner",
   description: "Clone any website with AI in seconds",
 }
 

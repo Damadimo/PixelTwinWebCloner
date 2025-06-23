@@ -1,4 +1,4 @@
-# Website Visual Cloner
+# PixelTwin Website Cloner
 
 ## Project Overview
 This project is a full-stack application that allows users to visually clone any public website as a static HTML snapshot. The goal is to create a pixel-perfect, visually indistinguishable static copy of the original site, including all colors, gradients, fonts, images, and layout. The app is designed to work generically for any website, including modern JavaScript-heavy sites.
